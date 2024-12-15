@@ -1,0 +1,90 @@
+/* src/app/styles/Layout.css */
+
+.layout-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1em;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin: 0.5em 1em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 2em;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Reduce padding and adjust font size on smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 0.5em 0;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 1em;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Optimize for very small screens (mobile devices) */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
+}
